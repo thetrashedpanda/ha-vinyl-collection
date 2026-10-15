@@ -3,11 +3,11 @@ from __future__ import annotations
 
 import logging
 import uuid
-from datetime import datetime
 from typing import Any
 
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.storage import Store
+from homeassistant.util import dt as dt_util
 
 from .const import STORAGE_KEY, STORAGE_VERSION
 
@@ -46,7 +46,7 @@ class VinylCollectionStore:
         record_id = str(uuid.uuid4())
         record = dict(record)
         record["record_id"] = record_id
-        record["date_added"] = datetime.now().isoformat()
+        record["date_added"] = dt_util.utcnow().isoformat()
         self._records[record_id] = record
         await self.async_save()
         return record

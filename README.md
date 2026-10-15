@@ -16,7 +16,7 @@ Spotify from your dashboard.
 - **Spotify integration** — link records to Spotify and play them on any Music Assistant speaker with a single tap
 - **Wish List** — tag records as wanted, with a dedicated tab separate from your collection
 - **Multi-user support** — attribute records to household members (HA People), filter the view by person
-- **Two sensors** — total collection count and wish list count, usable in automations and dashboards
+- **Three sensors** — total collection count, wish list count, and next-buy count, usable in automations and dashboards
 - **Custom Lovelace card** — automatically registered on install, no manual resource setup needed
 - **Services** for use in automations and scripts: `add_record`, `remove_record`, `update_record`, `search`
 
@@ -87,6 +87,7 @@ Use the search bar to filter across artist, album, label, genre, and catalog num
 | --- | --- |
 | `sensor.vinyl_collection_total_records` | Number of records in your collection (excludes wish list) |
 | `sensor.vinyl_collection_wish_list` | Number of records on your wish list |
+| `sensor.vinyl_collection_next_buy` | Number of records flagged as next buy |
 
 ## Services
 

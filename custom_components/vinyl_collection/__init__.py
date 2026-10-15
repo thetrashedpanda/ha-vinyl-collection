@@ -178,12 +178,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         hass.bus.async_listen_once(EVENT_HOMEASSISTANT_STARTED, _async_register_lovelace_resource)
 
     store = VinylCollectionStore(hass)
-    try:
-        await store.async_load()
-    except Exception:
-        _LOGGER.exception(
-            "Failed to load vinyl collection storage; starting with empty collection"
-        )
+    await store.async_load()
 
     hass.data[DOMAIN][entry.entry_id] = store
 
