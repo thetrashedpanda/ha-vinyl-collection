@@ -12,7 +12,7 @@ Spotify from your dashboard.
 
 - **Local-only storage** — uses Home Assistant's built-in `Store`, no external database
 - **Instant search** across artist, album, label, genre, and catalog number
-- **Discogs integration** — search Discogs to auto-fill artist, album, year, label, catalog number, and cover art when adding a record; view the tracklist for any search result to confirm you have the right album before adding it
+- **Discogs integration** — search by text or scan a barcode with your phone camera to find records and auto-fill artist, album, year, album-specific styles, label, catalog number, and cover art; styles are taken from the selected album rather than its broader genre; view the tracklist for any search result to confirm you have the right album before adding it
 - **Spotify integration** — link records to Spotify and play them on any Music Assistant speaker with a single tap
 - **Wish List** — tag records as wanted, with a dedicated tab separate from your collection
 - **Multi-user support** — attribute records to household members (HA People), filter the view by person
@@ -57,8 +57,8 @@ During setup and via **Settings → Devices & Services → Vinyl Collection → 
 ### Adding a record
 
 1. Click **+ Add Record**
-2. Optionally search Discogs to auto-fill fields — each result has a **Tracks** button that fetches the full tracklist so you can confirm you have the right album or pressing before selecting it
-3. Select a result to populate artist, album, year, label, catalog number, and cover art
+2. Optionally search Discogs by text or scan a record's barcode with your phone camera to find a matching release — each result has a **Tracks** button that fetches the full tracklist so you can confirm you have the right album or pressing before selecting it
+3. Select a result to populate artist, album, year, genre, style(s), and cover art
 4. Fill in or adjust artist, album, year, genre, and rating
 5. Toggle **Wish List** if this is a record you want but don't yet own
 6. If multiple HA People are configured, tap profile pictures under **Owner** to attribute the record

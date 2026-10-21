@@ -361,9 +361,8 @@ def _register_services(hass: HomeAssistant, entry: ConfigEntry) -> None:
             label = labels[0] if labels else None
             catalog = item.get("catno")
             cover_url = item.get("cover_image") or item.get("thumb")
-            genres = item.get("genre", [])
             styles = item.get("style", [])
-            genre = genres[0] if genres else (styles[0] if styles else None)
+            genre = ", ".join(styles) if styles else None
 
             title_raw = item.get("title", "")
             if " - " in title_raw:
